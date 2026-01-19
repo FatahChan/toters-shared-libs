@@ -56,7 +56,65 @@ npm publish
 
 ## Components
 
-- `TotersSharedUiLib` - Main UI component
+- `ButtonComponent` - Reusable button component
+
+## Adding a New Component
+
+To add a new component to this library:
+
+### 1. Generate the component using Nx
+
+```bash
+nx generate @nx/angular:component components/your-component --project=toters-shared-ui-lib --export
+```
+
+Or manually create the component files in `libs/toters-shared-ui-lib/src/components/`.
+
+### 2. Create component files
+
+Create a new folder for your component:
+
+```
+libs/toters-shared-ui-lib/src/components/your-component/
+  ├── your-component.component.ts
+  ├── your-component.component.html
+  ├── your-component.component.css
+  └── your-component.component.spec.ts
+```
+
+### 3. Export the component
+
+Add your component to `libs/toters-shared-ui-lib/src/index.ts`:
+
+```typescript
+export * from './components/your-component/your-component.component';
+```
+
+### 4. Build and test
+
+```bash
+# Build the library
+nx build toters-shared-ui-lib
+
+# Test the component
+nx test toters-shared-ui-lib
+
+# Lint the code
+nx lint toters-shared-ui-lib
+```
+
+### 5. Use in the showcase app
+
+Test your component in the showcase app at `apps/showcase`:
+
+```typescript
+import { YourComponent } from '@toters/shared-ui';
+
+@Component({
+  imports: [YourComponent],
+  template: '<lib-your-component></lib-your-component>'
+})
+```
 
 ## Requirements
 
