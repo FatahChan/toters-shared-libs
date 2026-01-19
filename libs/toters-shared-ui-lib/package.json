@@ -1,0 +1,19 @@
+{
+  "name": "@toters/shared-ui",
+  "version": "1.0.0",
+  "description": "Toters Shared UI Library - A collection of reusable Angular components",
+  "keywords": ["angular", "ui", "components", "toters"],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^21.0.0",
+    "@angular/core": "^21.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

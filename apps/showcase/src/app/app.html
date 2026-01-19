@@ -1,0 +1,100 @@
+<header class="header">
+  <div class="container">
+    <h1>{{ title }}</h1>
+    <p>A collection of reusable Angular components</p>
+  </div>
+</header>
+
+<main class="main">
+  <div class="container">
+    <section class="showcase-section">
+      <h2>Button Component</h2>
+      <p class="section-description">A versatile button component with multiple variants and sizes</p>
+      
+      <div class="demo-group">
+        <h3>Variants</h3>
+        <div class="button-row">
+          <toters-button 
+            label="Primary Button" 
+            variant="primary"
+            (clicked)="handleButtonClick('Primary')">
+          </toters-button>
+          <toters-button 
+            label="Secondary Button" 
+            variant="secondary"
+            (clicked)="handleButtonClick('Secondary')">
+          </toters-button>
+          <toters-button 
+            label="Danger Button" 
+            variant="danger"
+            (clicked)="handleButtonClick('Danger')">
+          </toters-button>
+        </div>
+      </div>
+
+      <div class="demo-group">
+        <h3>Sizes</h3>
+        <div class="button-row">
+          <toters-button 
+            label="Small" 
+            size="small"
+            (clicked)="handleButtonClick('Small')">
+          </toters-button>
+          <toters-button 
+            label="Medium" 
+            size="medium"
+            (clicked)="handleButtonClick('Medium')">
+          </toters-button>
+          <toters-button 
+            label="Large" 
+            size="large"
+            (clicked)="handleButtonClick('Large')">
+          </toters-button>
+        </div>
+      </div>
+
+      <div class="demo-group">
+        <h3>States</h3>
+        <div class="button-row">
+          <toters-button 
+            label="Enabled Button"
+            (clicked)="handleButtonClick('Enabled')">
+          </toters-button>
+          <toters-button 
+            label="Disabled Button"
+            [disabled]="true">
+          </toters-button>
+        </div>
+      </div>
+
+      <div class="click-counter">
+        <p>Total clicks: <strong>{{ clickCount }}</strong></p>
+      </div>
+    </section>
+    
+    <section class="info-section">
+      <h2>About This Library</h2>
+      <p>This is a publishable Angular library that can be shared across multiple applications.</p>
+      <div class="features">
+        <div class="feature">
+          <h3>📦 Publishable</h3>
+          <p>Ready to be published to npm</p>
+        </div>
+        <div class="feature">
+          <h3>🔧 Built with Nx</h3>
+          <p>Leverages Nx for efficient builds</p>
+        </div>
+        <div class="feature">
+          <h3>⚡ Modern Angular</h3>
+          <p>Uses standalone components</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Toters Shared UI Library</p>
+  </div>
+</footer>

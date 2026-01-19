@@ -1,0 +1,6 @@
+<button 
+  class="toters-btn toters-btn-{{ variant() }} toters-btn-{{ size() }}"
+  [disabled]="disabled()"
+  (click)="handleClick()">
+  {{ label() }}
+</button>

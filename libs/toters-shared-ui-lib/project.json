@@ -1,0 +1,33 @@
+{
+  "name": "toters-shared-ui-lib",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/toters-shared-ui-lib/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:ng-packagr",
+      "outputs": ["{workspaceRoot}/dist/libs/toters-shared-ui-lib"],
+      "options": {
+        "project": "libs/toters-shared-ui-lib/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/toters-shared-ui-lib/tsconfig.lib.json"
+        },
+        "development": {
+          "tsConfig": "libs/toters-shared-ui-lib/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{workspaceRoot}/coverage/libs/toters-shared-ui-lib"]
+    }
+  }
+}
