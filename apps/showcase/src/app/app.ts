@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { ButtonComponent } from '@fatahchan/toters-shared-ui-lib';
-
+import { ButtonComponent } from '@toters/shared-ui';
 
 @Component({
   imports: [ButtonComponent],

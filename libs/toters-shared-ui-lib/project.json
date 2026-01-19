@@ -4,7 +4,7 @@
   "sourceRoot": "libs/toters-shared-ui-lib/src",
   "prefix": "lib",
   "projectType": "library",
-  "tags": [],
+  "tags": ["scope:shared", "type:ui"],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:ng-packagr",
